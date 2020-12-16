@@ -14,6 +14,6 @@ var_values = []
 varInfo = [(v.varName, v.X) for v in model.getVars()]
 
 # Write to csv
-with open('variables.csv', 'w') as myfile:
+with open('opt_results/variables.csv', 'w') as myfile:
      wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
      wr.writerows(varInfo)

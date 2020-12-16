@@ -41,7 +41,7 @@ f_ij = {(i,j): plp.LpVariable(cat=plp.LpContinuous, lowBound=0,
         for i in set_I for j in set_J}
 
 # Flow distribution-consumption
-f_jk = {(j,k): plp.LpVariable(cat=plp.LpInteger, lowBound=0,
+f_jk = {(j,k): plp.LpVariable(cat=plp.LpContinuous, lowBound=0,
                               name="f_jk_{0}_{1}".format(j,k))
         for j in set_J for k in set_K}
 
@@ -50,6 +50,12 @@ x_j = {(j):
        plp.LpVariable(cat=plp.LpContinuous, lowBound=0,
                       name="x_{0}".format(j))
        for j in set_J}
+
+# # Control variable for consumption
+# y_k = {(k):
+#        plp.LpVariable(cat=plp.LpContinuous, lowBound=0,
+#                       name="y_{0}".format(k))
+#        for k in set_K}
 
 print("Done with Variables")
 
@@ -75,25 +81,30 @@ for i in set_I:
         model += plp.lpSum(f_ij[(i,j)] for j in set_J) <= P_i[i]
 print("passed constraint 3")
 
-# Constraint 4: Capacity of distribution
+# Constraint 4: Demand at distribution facility
 for j in set_J:
-        model += plp.lpSum(f_ij[(i,j)] for i in set_I) <= D_j[j]
+        model += plp.lpSum(f_ij[(i,j)] for i in set_I) >= 0.8*D_j[j]
 print("passed constraint 4")
 
-# Constrain 5: Consumption Demand
-for k in set_K:
-    model += plp.lpSum(f_jk[(j,k)] for j in set_J) >= C_k[k]
+# Constraint 5: Capacity at distribution facility
+for j in set_J:
+        model += plp.lpSum(f_ij[(i,j)] for i in set_I) <= D_j[j]
 print("passed constraint 5")
 
-# Constrain 6: Distribution Demand
-# for j in set_J:
-#        model += plp.lpSum(f_ij[(i,j)] for i in set_I) >= M_j[j]
-# print("passed constraint 6")
+# Constrain 6: Consumption Demand
+for k in set_K:
+    model += plp.lpSum(f_jk[(j,k)] for j in set_J) >= C_k[k]
+print("passed constraint 6")
 
 # Constrain 7: Make sure f_jk exists
 for k in set_K:
     model += f_jk[(j,k)] <= C_k[k]
 print("passed constraint 7")
+
+# # Constraint 8: Control variable for consumption
+# for k in set_K:
+#     model += plp.lpSum(f_jk[(j,k)] for j in set_J) == y_k[k]
+# print("passed constraint 8")
 
 model.writeLP("transportation_model.lp")
 

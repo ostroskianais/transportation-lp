@@ -1,0 +1,50 @@
+"","orig","dest","flow"
+"1","kansas,haskell","arizona,maricopa",1.1183665627
+"2","california,tulare","california,alameda",0.117010147761
+"3","alabama,conecuh","florida,hillsborough",1.27031437463
+"4","alabama,conecuh","florida,miami-dade",3.3823101229
+"5","alabama,conecuh","florida,orange",0.556020895084
+"6","tennessee,rutherford","florida,orange",0.395928249815
+"7","alabama,conecuh","florida,palm beach",5.84186929714
+"8","tennessee,lake","illinois,cook",6.36901929256
+"9","kentucky,carroll","illinois,cook",3.368019071702
+"10","nebraska,fillmore","illinois,cook",1.561731336108
+"11","wisconsin,sawyer","illinois,cook",10.9583651896
+"12","iowa,montgomery","illinois,cook",5.72442163103
+"13","nebraska,dakota","illinois,cook",11.7632965177
+"14","minnesota,dodge","illinois,cook",10.3746766711
+"15","rhode island,newport","massachusetts,middlesex",0.191034520805
+"16","kentucky,carroll","michigan,wayne",1.58720925809
+"17","nebraska,fillmore","nevada,churchill",1.58061531304
+"18","new york,oswego","new york,bronx",6.69062411104
+"19","virginia,hampton","new york,kings",2.82504483436
+"20","california,tulare","california,los angeles",11.226265913515
+"21","kansas,haskell","california,los angeles",8.783044858185
+"22","virginia,hampton","new york,nassau",1.672009328972
+"23","rhode island,newport","new york,nassau",11.544531269728
+"24","virginia,hampton","new york,new york",2.287430603087
+"25","tennessee,rutherford","new york,new york",1.349607507785
+"26","new york,oswego","new york,new york",7.51908365806
+"27","kentucky,anderson","new york,new york",12.0493304378
+"28","kentucky,carroll","new york,new york",2.343678955768
+"29","virginia,hampton","new york,queens",0.980793478251
+"30","rhode island,newport","new york,suffolk",0.771909007467
+"31","tennessee,rutherford","pennsylvania,philadelphia",10.9078603649
+"32","texas,burnet","texas,bexar",0.483745792988
+"33","missouri,christian","texas,dallas",7.12921306329
+"34","texas,burnet","texas,harris",4.36546800347
+"35","missouri,christian","texas,tarrant",5.95769614581
+"36","nebraska,fillmore","texas,tarrant",6.820650694712
+"37","texas,burnet","texas,tarrant",7.971306974842
+"38","kansas,haskell","texas,tarrant",0.0163044255359974
+"39","wyoming,sublette","washington,king",2.95889302935
+"40","washington,stevens","washington,king",5.56266047391
+"41","north dakota,foster","washington,king",21.8388782705
+"42","nebraska,fillmore","washington,king",1.78781454514
+"43","kansas,haskell","california,orange",4.69197282522
+"44","kansas,haskell","california,riverside",2.39971991447
+"45","california,tulare","california,sacramento",1.00600830767
+"46","kansas,haskell","california,san bernardino",1.45391826379
+"47","kansas,haskell","california,san diego",2.86251655558
+"48","california,tulare","california,santa clara",0.388000313854
+"49","alabama,conecuh","florida,broward",0.193809619146
